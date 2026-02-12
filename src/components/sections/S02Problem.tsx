@@ -19,7 +19,7 @@ export default function S02Problem() {
   const yShift = useTransform(scrollYProgress, [0.2, 0.5], [10, 0]);
 
   return (
-    <section ref={containerRef} className="min-h-[150vh] w-full flex flex-col items-center justify-center bg-background relative overflow-hidden py-8 md:py-32">
+    <section ref={containerRef} className="min-h-[150vh] w-full flex flex-col items-center justify-center bg-background relative overflow-hidden pb-8 pt-0 md:py-32">
 
       <div className="sticky top-1/4 w-full max-w-5xl px-6">
         <div className="text-center mb-12">
@@ -28,7 +28,7 @@ export default function S02Problem() {
         </div>
 
         {/* The Graph Visualization container */}
-        <div className="relative w-full aspect-[16/9] border-l border-b border-border/50 bg-background/20 backdrop-blur-sm rounded-tr-xl">
+        <div className="relative w-full aspect-[4/3] md:aspect-[16/9] border-l border-b border-border/50 bg-background/20 backdrop-blur-sm rounded-tr-xl">
 
           {/* Y-Axis Label */}
           <div className="absolute -left-16 top-0 text-xs text-muted-foreground -rotate-90 origin-right flex items-center gap-2">
