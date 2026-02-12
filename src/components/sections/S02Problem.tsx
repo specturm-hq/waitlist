@@ -19,7 +19,7 @@ export default function S02Problem() {
   const yShift = useTransform(scrollYProgress, [0.2, 0.5], [10, 0]);
 
   return (
-    <section ref={containerRef} className="min-h-[150vh] w-full flex flex-col items-center justify-center bg-background relative overflow-hidden py-16 md:py-32">
+    <section ref={containerRef} className="min-h-[150vh] w-full flex flex-col items-center justify-center bg-background relative overflow-hidden py-8 md:py-32">
 
       <div className="sticky top-1/4 w-full max-w-5xl px-6">
         <div className="text-center mb-12">
