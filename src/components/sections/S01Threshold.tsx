@@ -8,7 +8,7 @@ export default function S01Threshold() {
 
     return (
         <section
-            className="relative min-h-[60vh] md:min-h-screen w-full flex flex-col items-center justify-center z-20 overflow-visible"
+            className="relative min-h-[75vh] md:min-h-screen w-full flex flex-col items-center justify-center z-20 overflow-visible"
         >
             {/* ── Ambient Background ── */}
             <div className="absolute inset-0 -z-10">
@@ -18,7 +18,7 @@ export default function S01Threshold() {
             </div>
 
             {/* ── Content ── */}
-            <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl pt-20 md:pt-28 pb-0 md:pb-12">
+            <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl pt-20 md:pt-28 pb-4 md:pb-12">
                 {/* Overline */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

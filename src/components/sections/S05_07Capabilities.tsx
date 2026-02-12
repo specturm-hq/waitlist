@@ -41,7 +41,7 @@ export default function S05_07Capabilities() {
     }, []);
 
     return (
-        <section ref={containerRef} className="h-screen w-full relative overflow-hidden bg-background">
+        <section ref={containerRef} id="capabilities" className="h-screen w-full relative overflow-hidden bg-background">
             <div ref={trackRef} className="flex h-full w-max">
                 <S05Roadmaps />
                 <S06Resources />

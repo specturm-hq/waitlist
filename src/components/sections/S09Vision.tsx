@@ -26,7 +26,7 @@ export default function S09Vision() {
     }, []);
 
     return (
-        <section ref={containerRef} className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-background pt-32">
+        <section ref={containerRef} id="vision" className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-background pt-32">
             <div className="z-10 text-center max-w-3xl px-6 mb-12">
                 <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-4">Our Vision</h2>
                 <h3 className="text-3xl md:text-5xl font-bold leading-tight">

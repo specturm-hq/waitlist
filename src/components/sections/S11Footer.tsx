@@ -7,9 +7,9 @@ export default function S11Footer() {
     const currentYear = new Date().getFullYear();
 
     const quickLinks = [
-        { name: "Roadmap", href: "#roadmap" },
-        { name: "Resources", href: "#resources" },
-        { name: "Execution", href: "#execution" },
+        { name: "Capabilities", href: "#capabilities" },
+        { name: "Vision", href: "#vision" },
+        { name: "Join Waitlist", href: "#conversion-section" },
     ];
 
     const socialLinks = [
