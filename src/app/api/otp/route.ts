@@ -138,29 +138,19 @@ export async function POST(req: Request) {
 
             otpStore.set(email, { hashedOTP, expiresAt, name });
 
-            // Send email (production)
-            const isProduction = !!process.env.RESEND_API_KEY;
-            let emailSent = false;
-
-            if (isProduction) {
-                emailSent = await sendOTPEmail(email, generatedOtp, name);
-                if (!emailSent) {
-                    return NextResponse.json({
-                        success: false,
-                        message: 'Failed to send email. Please try again.'
-                    }, { status: 500 });
-                }
+            // Send email via Gmail SMTP
+            const emailSent = await sendOTPEmail(email, generatedOtp, name);
+            if (!emailSent) {
+                return NextResponse.json({
+                    success: false,
+                    message: 'Failed to send email. Please try again.'
+                }, { status: 500 });
             }
 
-            // Development mode: return OTP in response
-            const isDev = !isProduction;
             return NextResponse.json({
                 success: true,
-                message: isDev
-                    ? 'OTP generated (dev mode — check response)'
-                    : 'Verification code sent! Check your email.',
-                expiresIn: 300, // 5 minutes in seconds
-                ...(isDev && { devOtp: generatedOtp }) // Only in dev
+                message: 'Verification code sent! Check your email.',
+                expiresIn: 300,
             });
         }
 

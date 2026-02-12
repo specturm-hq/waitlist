@@ -91,11 +91,6 @@ export default function WaitlistForm({ onFocusChange, className }: WaitlistFormP
                 setStatus("idle");
                 setOtpExpirySeconds(300); // Reset to 5 minutes
                 setResendCooldown(30); // Start 30-second cooldown
-
-                // Dev mode: show OTP in alert (production will send email)
-                if (data.devOtp) {
-                    alert(`DEV MODE: Your OTP is ${data.devOtp}`);
-                }
             } else {
                 setStatus("error");
                 setErrorMessage(data.message || "Failed to send OTP");
@@ -125,11 +120,6 @@ export default function WaitlistForm({ onFocusChange, className }: WaitlistFormP
                 setStatus("idle");
                 setOtpExpirySeconds(300); // Reset to 5 minutes
                 setResendCooldown(30); // Start 30-second cooldown
-
-                // Dev mode
-                if (data.devOtp) {
-                    alert(`DEV MODE: New OTP is ${data.devOtp}`);
-                }
             } else {
                 setStatus("error");
                 setErrorMessage(data.message || "Failed to resend OTP");

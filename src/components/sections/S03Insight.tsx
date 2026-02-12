@@ -15,7 +15,7 @@ export default function S03Insight() {
     const beamHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <section ref={containerRef} className="min-h-screen w-full flex flex-col items-center justify-center bg-background relative overflow-hidden py-32">
+        <section ref={containerRef} className="min-h-screen w-full flex flex-col items-center justify-center bg-background relative overflow-hidden py-16 md:py-32">
 
             {/* The Beam - Connecting from previous section */}
             <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-accent/20">
